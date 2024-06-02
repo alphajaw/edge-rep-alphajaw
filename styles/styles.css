@@ -215,11 +215,11 @@ main .section.highlight {
 }
 
 
-main.orange
+main .orange
 {
   background-color: orange;
 }
-main.yellow
+main .yellow
 {
   background-color: yellow;
 }

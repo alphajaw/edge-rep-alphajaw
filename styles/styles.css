@@ -213,3 +213,13 @@ main .section.highlight {
 {
   color: aqua;
 }
+
+
+main.orange
+{
+  background-color: orange;
+}
+main.yellow
+{
+  background-color: yellow;
+}

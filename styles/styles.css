@@ -206,5 +206,29 @@ main .section {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: blue;
+}
+
+#this-is-a-heading
+{
+  color: aqua;
+}
+
+
+main .orange
+{
+  background-color: greenyellow;
+}
+main .yellow
+{
+  background-color: pink;
+}
+#design-your-emi-1
+{
+  color: blue;
+  font-size: 30px;
+}
+main img
+{ 
+  width: 4%;
 }

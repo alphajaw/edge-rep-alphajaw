@@ -232,3 +232,14 @@ main img
 { 
   width: 4%;
 }
+.default-content-wrapper
+{
+    color: #3B3B3B;
+    background-color: orange;
+}
+
+.section
+{
+    color: #3B3B3B;
+    background-color: orange;
+}

@@ -357,6 +357,35 @@ function createOptimizedPicture(
   return picture;
 }
 
+
+/**
+ * Calculate EMI (Equated Monthly Installment) based on principal amount, interest rate,
+ * and loan tenure.
+ * @param {number} principal - The principal amount of the loan.
+ * @param {number} interestRate - Annual interest rate (percentage).
+ * @param {number} tenureYears - Loan tenure in years.
+ * @returns {number} The calculated monthly EMI.
+ */
+function emiCalculator(principal, interestRate, tenureYears) {
+  // Convert annual interest rate to monthly rate and tenure to months
+  const monthlyInterestRate = (interestRate / 12) / 100;
+  const tenureMonths = tenureYears * 12;
+
+  // Calculate EMI using the formula: EMI = [P * r * (1 + r)^n] / [(1 + r)^n - 1]
+  const emi = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -tenureMonths));
+
+  return emi;
+}
+
+// Example usage:
+const principalAmount = 100000; // Replace with your desired initial value
+const annualInterestRate = 8; // Replace with your desired initial value
+const loanTenureYears = 5; // Replace with your desired initial value
+
+const emi = emiCalculator(principalAmount, annualInterestRate, loanTenureYears);
+console.log('Monthly EMI:', emi);
+
+
 /**
  * Set template (page structure) and theme (page styles).
  */
@@ -723,4 +752,5 @@ export {
   toClassName,
   updateSectionsStatus,
   waitForLCP,
+  emiCalculator,
 };

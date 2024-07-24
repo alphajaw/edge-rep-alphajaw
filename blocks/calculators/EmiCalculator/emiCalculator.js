@@ -1,0 +1,1 @@
+import { emiCalculator } from '../../scripts/aem.js';

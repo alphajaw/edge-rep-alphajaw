@@ -1,5 +1,10 @@
-.footer-section-details
-{
+.footer-section-details {
   display: flex;
   justify-content: space-between;
+}
+
+.footer-section-details-wrapper {
+  margin-right: auto !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
 }

@@ -1,7 +1,7 @@
 .footer-section
 {
   background: #f4f6fc;
-  padding: 62px 0px;
+  padding: 62px 0px !important;
 }
 .footer-section-details {
   display: flex;

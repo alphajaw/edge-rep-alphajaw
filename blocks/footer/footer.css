@@ -25,7 +25,7 @@
   flex: 0 0 31%;
 }
 
-footer-section-details> div
+.footer-section-details> div
 {
   display: flex;
 }

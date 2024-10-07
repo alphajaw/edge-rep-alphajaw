@@ -1,5 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { MobileAppSection } from '../components/MobileAppSection.js';
+import { MobileAppSection } from '../footer/MobileAppSection.js';
 
 export default function decorate(block) {
   const sections = block.querySelectorAll(':scope > div');

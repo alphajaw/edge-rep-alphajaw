@@ -12,3 +12,7 @@
 {
   max-width: 1400px !important;
 }
+.footer-section-details-3
+{
+  display: flex;
+}

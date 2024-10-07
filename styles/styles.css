@@ -232,3 +232,10 @@ main img
 { 
   width: 4%;
 }
+
+/* Footer CSS */
+
+.footer-section-details
+{
+  display: flex;
+}

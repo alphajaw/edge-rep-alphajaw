@@ -24,3 +24,11 @@
 .footer-section-details > div {
   flex: 0 0 31%;
 }
+.footer-section-details-4-wrapper
+{
+  max-width: 1400px !important;
+}
+.footer-section-details-4
+{
+  display: flex;
+}

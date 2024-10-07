@@ -1,3 +1,7 @@
+.footer-section
+{
+  background: #f4f6fc;
+}
 .footer-section-details {
   display: flex;
   justify-content: space-between;

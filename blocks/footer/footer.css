@@ -1,4 +1,5 @@
 .footer-section-details
 {
   display: flex;
+  justify-content: space-between;
 }

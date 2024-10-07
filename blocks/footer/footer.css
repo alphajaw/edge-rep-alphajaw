@@ -15,4 +15,9 @@
 .footer-section-details-3
 {
   display: flex;
+  justify-content: space-evenly;
+}
+.footer-section-details-3-wrapper
+{
+  max-width: 1400px !important;
 }

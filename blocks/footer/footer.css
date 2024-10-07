@@ -22,6 +22,5 @@
   max-width: 1400px !important;
 }
 .footer-section-details > div {
-  flex: 0 0 33%; /* Sets each inner div to take up 33% of the width */
-  text-align: center; /* Centers the text inside each div */
+  flex: 0 0 33%;
 }

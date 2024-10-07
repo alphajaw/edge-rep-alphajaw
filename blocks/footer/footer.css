@@ -38,3 +38,11 @@
 {
   display: flex;
 }
+
+.ooter-section-details-2-wrapper > .footer-section-details-2 > p
+{
+  color: #6a738a;
+  font-size: 12px;
+  line-height: normal;
+  margin-bottom: 0;
+}

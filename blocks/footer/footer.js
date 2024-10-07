@@ -1,14 +1,23 @@
 import { fetchPlaceholders } from '../../scripts/aem.js';
+import { MobileAppSection } from './MobileAppSection.js';
 
 function createFooterSection(row, sectionIndex) {
   const section = document.createElement('div');
   section.classList.add('footer-section');
   section.dataset.sectionIndex = sectionIndex;
 
-  row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
-    column.classList.add(`footer-section-${colIdx === 0 ? 'title' : 'content'}`);
-    section.append(column);
-  });
+  const title = row.querySelector(':scope > div:first-child');
+  const content = row.querySelector(':scope > div:last-child');
+
+  if (title) {
+    title.classList.add('footer-section-title');
+    section.append(title);
+  }
+
+  if (content) {
+    content.classList.add('footer-section-content');
+    section.append(content);
+  }
 
   return section;
 }
@@ -53,6 +62,13 @@ export default async function decorate(block) {
 
   rows.forEach((row, idx) => {
     const section = createFooterSection(row, idx);
+    
+    // Check if this is the Mobile App section
+    if (section.querySelector('.footer-section-title').textContent.trim().toLowerCase() === 'mobile app') {
+      const mobileAppSection = new MobileAppSection(section);
+      mobileAppSection.init();
+    }
+    
     footerContent.append(section);
 
     // Make sections expandable on mobile

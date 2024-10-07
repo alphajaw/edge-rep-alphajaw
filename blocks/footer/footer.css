@@ -24,8 +24,3 @@
 .footer-section-details > div {
   flex: 0 0 31%;
 }
-
-.footer-section-details> div
-{
-  display: flex;
-}

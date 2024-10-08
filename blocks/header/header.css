@@ -3,7 +3,7 @@ header .nav-wrapper {
   background-color: #fcb017;
   width: 100%;
   z-index: 2;
-  position: fixed;
+  position: relative;
   text-align: center;
   padding-right: 15px;
   padding-left: 15px;

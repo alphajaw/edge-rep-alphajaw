@@ -26,7 +26,10 @@ header nav {
   padding: 0 1rem;
   font-family: var(--body-font-family);
 }
-
+.nav-sections > .default-content-wrapper > :first-child
+{
+  background-color: gray;
+}
 header nav[aria-expanded="true"] {
   grid-template:
     'hamburger brand' var(--nav-height) 'sections sections' 1fr
@@ -34,6 +37,7 @@ header nav[aria-expanded="true"] {
   overflow-y: auto;
   min-height: 100vh;
 }
+
 
 @media (width >=600px) {
   header nav {

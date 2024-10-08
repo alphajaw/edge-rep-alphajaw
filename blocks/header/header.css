@@ -32,6 +32,11 @@ header nav {
   height: 40px;
   background-color: #333;
   color: white;
+  width: 100%;
+  padding-left: 15px;
+  display: flex;
+  padding-right: 30px;
+  justify-content: space-between;
 }
 
 .nav-brand>.default-content-wrapper>picture {}

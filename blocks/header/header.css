@@ -29,7 +29,9 @@ header nav {
 }
 
 .nav-sections>.default-content-wrapper> :first-child {
-  background-color: gray;
+  height: 40px;
+  background-color: #333;
+  color: white;
 }
 
 .nav-brand>.default-content-wrapper>picture {}

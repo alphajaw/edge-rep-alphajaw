@@ -1,7 +1,3 @@
-// export default function decorate(block) {
-//     const connectwithourcustomer = document.createElement('div');
-//     connectwithourcustomer.className = 'connect-with-our-customer-heading';
-// }
 export default function decorate(block) {
 
     [...block.children].forEach((row, rowIndex) => {

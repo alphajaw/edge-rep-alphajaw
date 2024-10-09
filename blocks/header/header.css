@@ -308,9 +308,9 @@ header nav .nav-tools {
 .default-content-wrapper ul li::after {
   content: '';
   position: absolute;
-  right: 0;
   top: 0;
-  height: 100%;
+  right: 0;
+  height: 100%; /* Full height of the list item */
   width: 2px; /* Width of the black line */
   background-color: black; /* Color of the line */
   opacity: 0; /* Initially hidden */

@@ -36,7 +36,6 @@ header nav {
   padding-left: 15px;
   display: flex;
   padding-right: 30px;
-  justify-content: space-between;
 }
 
 .nav-brand>.default-content-wrapper>picture {}

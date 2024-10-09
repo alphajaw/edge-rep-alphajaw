@@ -298,9 +298,25 @@ header nav .nav-tools {
   position: relative;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
+  overflow: hidden;
 }
 
 .default-content-wrapper ul li:hover {
   background-color: yellow;
   clip-path: polygon(0 0, 88% 0, 100% 100%, 50% 100%, 0 100%);
+}
+.default-content-wrapper ul li::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 2px; /* Width of the black line */
+  background-color: black; /* Color of the line */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.default-content-wrapper ul li:hover::after {
+  opacity: 1; /* Show the line on hover */
 }

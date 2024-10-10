@@ -39,7 +39,7 @@ header nav {
   padding-left: 15px;
   display: flex;
   padding-right: 30px;
-  padding-top: 30px;
+  padding-top: 20px;
   justify-content: space-between;
 }
 .default-content-wrapper > ul:nth-of-type(2)
@@ -315,4 +315,27 @@ header nav .nav-tools {
   color: white;
   padding-top: 8px;
   height: 30px;
+}.default-content-wrapper {
+  position: relative; /* Keep elements fixed */
+}
+
+.default-content-wrapper > ul {
+  margin: 0; /* Reset margin */
+}
+
+.default-content-wrapper > ul:nth-of-type(2) {
+  padding-top: 1rem !important;
+}
+
+.default-content-wrapper > ul:nth-of-type(2) li {
+  height: 30px; /* Fixed height */
+  line-height: 30px; /* Center text */
+}
+
+.default-content-wrapper > ul:nth-of-type(2) li:hover {
+  background-color: #e19c14; /* Background color on hover */
+  padding-left: 15px; /* Adjust padding */
+  color: white; /* Text color */
+  border: 2px solid #e19c14; /* Add border */
+  box-sizing: border-box; /* Ensure box model includes padding */
 }

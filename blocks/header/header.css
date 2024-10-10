@@ -308,3 +308,11 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
+.default-content-wrapper > ul:nth-of-type(2) :hover
+{
+  background-color: #e19c14;
+  padding-left: 15px;
+  color: white;
+  padding-top: 8px;
+  height: 30px;
+}

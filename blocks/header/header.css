@@ -46,7 +46,7 @@ header nav {
   padding-top: 1rem !important;
 }
 .nav-sections > .default-content-wrapper{
-  padding-top: 1.1rem;
+  padding-top: 11px;
 }
 .nav-brand>.default-content-wrapper>picture {}
 
@@ -263,9 +263,10 @@ header nav .nav-sections ul>li>ul>li {
   header nav .nav-sections .default-content-wrapper>ul>li {
     flex: 0 1 auto;
     position: relative;
-    font-weight: 500;
+    font-size: 12px;
     font-family: Roboto;
     font-weight: 700;
+    padding: 0 8px 0 10px;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul {

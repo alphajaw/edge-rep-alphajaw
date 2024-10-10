@@ -1,6 +1,7 @@
 /* header and nav layout */
 header .nav-wrapper {
   background-color: #fcb017;
+  width: 100%;
   z-index: 2;
   position: relative;
   text-align: center;
@@ -17,7 +18,7 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'brand hamburger tools' var(--nav-height) 'sections sections sections' 1fr / auto 1fr auto;
+    'hamburger brand tools' var(--nav-height) 'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
   gap: 0 2em;
   margin: auto;
@@ -37,18 +38,16 @@ header nav {
   padding-right: 30px;
 }
 
-.nav-brand>.default-content-wrapper>picture {
-  display: flex;
-  justify-content: flex-start;
-}
+.nav-brand>.default-content-wrapper>picture {}
 
 header nav[aria-expanded="true"] {
   grid-template:
-    'brand hamburger' var(--nav-height) 'sections sections' 1fr
+    'hamburger brand' var(--nav-height) 'sections sections' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
 }
+
 
 @media (width >=600px) {
   header nav {
@@ -59,8 +58,7 @@ header nav[aria-expanded="true"] {
 @media (width >=900px) {
   header nav {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
   }
 
   header nav[aria-expanded="true"] {
@@ -166,15 +164,13 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
-  justify-self: start;
-  padding-left: 0;
 }
 
 header nav .nav-brand img {
   width: 160px !important;
   height: 65px;
   padding-top: 44px;
-  margin-left: -1rem;
+  padding-left: 5px;
 }
 
 /* sections */
@@ -298,7 +294,6 @@ header nav .nav-sections ul>li>ul>li {
 header nav .nav-tools {
   grid-area: tools;
 }
-
 .default-content-wrapper ul li {
   position: relative;
   padding: 10px 20px;
@@ -311,33 +306,18 @@ header nav .nav-tools {
   background-color: #fcb017;
   clip-path: polygon(0 0, 88% 0, 100% 100%, 50% 100%, 0 100%);
 }
-
 .default-content-wrapper ul li::after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
-  width: 2px;
-  background-color: black;
-  opacity: 0;
+  height: 100%; /* Full height of the list item */
+  width: 2px; /* Width of the black line */
+  background-color: black; /* Color of the line */
+  opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease;
 }
 
 .default-content-wrapper ul li:hover::after {
-  opacity: 1;
-}
-
-@media (width >= 1200px) {
-  header nav {
-    justify-content: space-between;
-  }
-  
-  header .nav-brand {
-    flex-basis: auto;
-  }
-  
-  header nav .nav-sections {
-    flex: 0 1 auto;
-  }
+  opacity: 1; /* Show the line on hover */
 }

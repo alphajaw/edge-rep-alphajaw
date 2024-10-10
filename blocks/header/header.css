@@ -9,7 +9,7 @@ header .nav-wrapper {
   padding-left: 15px;
   margin: 0 auto;
 }
-.header
+.header-wrapper > div
 {
   max-width: 100% !important;
 }

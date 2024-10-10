@@ -196,15 +196,41 @@ main .section {
   }
 }
 
-@media (width >= 900px) {
+/* @media (width >= 900px) {
   .section > div {
     max-width: 1200px;
-    margin: auto;
   }
-}
+} */
 
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: blue;
+}
+
+#this-is-a-heading
+{
+  color: aqua;
+}
+
+
+main .orange
+{
+  background-color: greenyellow;
+}
+main .yellow
+{
+  background-color: pink;
+}
+#design-your-emi-1
+{
+  color: blue;
+  font-size: 30px;
+}
+
+/* Footer CSS */
+
+.footer-section-details
+{
+  display: flex;
 }

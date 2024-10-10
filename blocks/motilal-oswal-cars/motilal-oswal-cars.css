@@ -1,0 +1,112 @@
+.motilal-oswal-cars {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.connect-with-our-customer-cards {
+    display: flex;
+        align-items: center;
+        width: 170px;
+        border-radius: 15px;
+        height: 145px;
+        background: #fff;
+        box-shadow: 0 14px 26px rgba(0, 0, 0, .15);
+        overflow: hidden;
+        transition: all .3s ease-out;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+}
+
+.connect-with-our-customer-cards:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, .11), 0 24px 46px rgba(220, 233, 255, .48);
+}
+
+.connect-with-our-customer-cards:hover .connect-with-our-customer-cards-img {
+    border: 2px solid #fff;
+    z-index: 1;
+}
+
+.connect-with-our-customer-cards:hover .connect-with-our-customer-cards-img::after {
+    background: #f1f7ff;
+}
+
+
+.connect-with-our-customer-cards:hover::after {
+    background: #d3e4ff;
+    transform: translate(-50%, -50%) scale(4.5);
+}
+
+.connect-with-our-customer-cards-img {
+    width: 58px;
+    height: 58px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #dce9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-out;
+
+}
+
+
+.connect-with-our-customer-cards-img picture {
+    position: relative;
+    z-index: 1;
+    display: flex;
+
+}
+
+.connect-with-our-customer-cards::after {
+    content: "";
+    width: 52px;
+    height: 52px;
+    display: block;
+    position: absolute;
+    background: transparent;
+    border-radius: 50%;
+    top: 45%;
+    left: 50%;
+    transition: all .4s ease;
+    transform: translate(-50%, -50%);
+}
+
+.connect-with-our-customer-cards-img::after {
+    content: "";
+    width: 52px;
+    height: 52px;
+    display: block;
+    position: absolute;
+    background: #dce9ff;
+    border-radius: 50%;
+    top: 35%;
+    left: 50%;
+    transition: all .3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.connect-with-our-customer-cards-img img {
+    height: 30px;
+    width: 30px;
+}
+
+.connect-with-our-customer-text {
+    height: 44px;
+    position: relative;
+    z-index: 1;
+}
+
+.connect-with-our-customer-text p {
+    letter-spacing: -0.03em;
+    line-height: 21px;
+    font-size: 15px;
+    /* font-family: Roboto; */
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+
+}

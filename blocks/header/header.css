@@ -4,7 +4,8 @@ header .nav-wrapper {
   z-index: 2;
   position: relative;
   text-align: center;
-  padding: 0;
+  padding-right: 15px;
+  padding-left: 15px;
   margin: 0 auto;
 }
 
@@ -14,13 +15,19 @@ header .nav-wrapper {
 
 header nav {
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  /* grid-template:
+    'hamburger brand tools' var(--nav-height) 'sections sections sections' 1fr / auto 1fr auto; */
+    grid-template:
+    'hamburger brand tools' var(--nav-height)
+    'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
-  justify-content: flex-start;
+  gap: 0 2em;
+  margin: auto;
   max-width: 1264px;
-  height: 110px;
-  padding: 0;
-  margin: 0 auto;
+  height: var(--nav-height);
+  padding: 0 1rem;
+  font-family: var(--body-font-family);
 }
 
 .nav-sections>.default-content-wrapper> :first-child {
@@ -73,7 +80,10 @@ header nav a:any-link {
 
 /* hamburger */
 header nav .nav-hamburger {
-  margin-right: 1em;
+  grid-area: hamburger;
+  height: 22px;
+  display: flex;
+  align-items: center;
 }
 
 header nav .nav-hamburger button {
@@ -151,26 +161,30 @@ header nav[aria-expanded="true"] .nav-hamburger-icon::after {
 
 /* brand */
 header .nav-brand {
-  flex-basis: auto;
+  grid-area: brand;
+  flex-basis: auto; /* Change this to auto */
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
-  padding: 0;
-  margin: 0;
+  padding-left: 0; /* Remove any left padding */
+  margin-left: 0; /* Ensure no margin on the left */
 }
-
 
 header nav .nav-brand img {
   width: 160px !important;
   height: 65px;
-  padding-top: 44px;
-  padding-left: 0;
+  padding-top: 44px; /* Adjust as needed */
+  margin: 0; /* Remove margins */
+  display: block; /* Ensure image is a block element */
 }
-
 
 /* sections */
 header nav .nav-sections {
-  flex: 1;
+  grid-area: sections;
+  flex: 1 1 auto;
+  display: none;
+  visibility: hidden;
+  background-color: var(--overlay-color);
 }
 
 header nav[aria-expanded="true"] .nav-sections {

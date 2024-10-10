@@ -302,7 +302,7 @@ header nav .nav-tools {
 }
 
 .default-content-wrapper ul li:hover {
-  background-color: yellow;
+  background-color: #fcb017;
   clip-path: polygon(0 0, 88% 0, 100% 100%, 50% 100%, 0 100%);
 }
 .default-content-wrapper ul li::after {

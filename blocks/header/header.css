@@ -42,7 +42,10 @@ header nav {
   padding-right: 30px;
   justify-content: space-between;
 }
-
+header nav .nav-sections ul > :second-child
+{
+  padding-top: 1rem !important;
+}
 .nav-brand>.default-content-wrapper>picture {}
 
 header nav[aria-expanded="true"] {

@@ -39,7 +39,7 @@ header nav {
   padding-left: 15px;
   display: flex;
   padding-right: 30px;
-  padding-top: 20px;
+  padding-top: 30px;
   justify-content: space-between;
 }
 .default-content-wrapper > ul:nth-of-type(2)

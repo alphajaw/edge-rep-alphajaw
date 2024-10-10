@@ -29,13 +29,14 @@ header nav {
 }
 
 .nav-sections>.default-content-wrapper> :first-child {
-  height: 48px;
+  height: 40px;
   background-color: #333;
   color: white;
   width: 100%;
   padding-left: 15px;
   display: flex;
   padding-right: 30px;
+  justify-content: space-between;
 }
 
 .nav-brand>.default-content-wrapper>picture {}
@@ -246,7 +247,7 @@ header nav .nav-sections ul>li>ul>li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 0;
+    gap: 2em;
     margin: 0;
     font-size: var(--body-font-size-xs);
   }
@@ -293,31 +294,4 @@ header nav .nav-sections ul>li>ul>li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
-}
-.default-content-wrapper ul li {
-  position: relative;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-  overflow: hidden;
-  margin-top: 8px;
-}
-
-.default-content-wrapper ul li:hover {
-  background-color: #fcb017;
-  clip-path: polygon(0 0, 88% 0, 100% 100%, 50% 100%, 0 100%);
-}
-.default-content-wrapper ul li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%; /* Full height of the list item */
-  width: 2px; /* Width of the black line */
-  background-color: black; /* Color of the line */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease;
-}
-
-.default-content-wrapper ul li:hover::after {
-  opacity: 1; /* Show the line on hover */
 }

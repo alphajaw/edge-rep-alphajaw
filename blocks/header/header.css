@@ -46,6 +46,9 @@ header nav {
 {
   padding-top: 1rem !important;
 }
+.nav-sections > .default-content-wrapper{
+  padding-top: 1.1rem;
+}
 .nav-brand>.default-content-wrapper>picture {}
 
 header nav[aria-expanded="true"] {

@@ -424,3 +424,20 @@ header nav .nav-tools {
   position: relative;
   padding: 10px 15px;
 }
+.default-content-wrapper > ul:last-of-type > li:last-of-type
+{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 13px;
+  font-family: Roboto;
+  font-weight: 700;
+  background-color: #ee3238;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  padding: 10px 15px;
+  margin-left: 15px;
+  cursor: pointer;
+}

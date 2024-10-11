@@ -353,7 +353,7 @@ header nav .nav-tools {
 .default-content-wrapper>ul:last-of-type {
   display: flex;
   justify-content: space-between;
-  margin-top: -3rem;
+  margin-top: -2.5rem;
 }
 
 .default-content-wrapper>ul:last-of-type li {
@@ -436,7 +436,7 @@ header nav .nav-tools {
   border-radius: 5px;
   display: inline-block;
   position: relative;
-  padding: 10px 15px;
+  margin: 5px 15px;
   margin-left: 15px;
   cursor: pointer;
 }

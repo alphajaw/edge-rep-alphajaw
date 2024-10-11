@@ -410,6 +410,7 @@ header nav .nav-tools {
 
 .default-content-wrapper > ul:last-of-type > li:first-of-type
 {
+  height: 45px;
   text-transform: uppercase;
   color: #fff;
   font-size: 13px;
@@ -425,6 +426,7 @@ header nav .nav-tools {
 }
 .default-content-wrapper > ul:last-of-type > li:last-of-type
 {
+  height: 45px;
   text-transform: uppercase;
   color: #fff;
   font-size: 13px;

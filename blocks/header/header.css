@@ -457,3 +457,6 @@ header nav .nav-tools {
 .default-content-wrapper > ul:last-of-type li picture {
   margin-right: 8px; /* Space between image and text */
 }
+.default-content-wrapper > ul:last-of-type li picture img {
+  vertical-align: middle; /* Align image to the middle */
+}

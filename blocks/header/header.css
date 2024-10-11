@@ -40,8 +40,7 @@ header nav {
   padding-right: 30px;
   padding-top: 20px;
   justify-content: space-between;
-  margin-right: 0%;
-  padding: 0 0 0 0 !important;
+
 }
 
 .nav-sections>.default-content-wrapper {
@@ -398,4 +397,10 @@ header nav .nav-tools {
 .nav-drop:hover>ul,
 .nav-drop:focus>ul {
   display: block;
+}
+
+.default-content-wrapper > ul:first-of-type > li 
+{
+  margin-right: 0%;
+  padding: 0 0 0 0 !important;
 }

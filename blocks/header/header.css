@@ -423,6 +423,7 @@ header nav .nav-tools {
   display: inline-block;
   position: relative;
   margin: 18px 15px !important;
+  margin-top: 4px !important;
 }
 .default-content-wrapper > ul:last-of-type > li:last-of-type
 {
@@ -459,4 +460,5 @@ header nav .nav-tools {
 }
 .default-content-wrapper > ul:last-of-type li picture img {
   vertical-align: middle; /* Align image to the middle */
+  margin-top: 6px;
 }

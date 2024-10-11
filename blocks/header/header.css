@@ -340,7 +340,7 @@ header nav .nav-tools {
   border: 2px solid #e19c14; /* Add border */
   box-sizing: border-box; /* Ensure box model includes padding */
 }
-.default-content-wrapper > ul:nth-of-type(2) li:nth-child(6) {
+.default-content-wrapper > ul:nth-of-type(2) li:nth-child(8) {
   text-transform: uppercase;
     color: #fff;
     font-size: 13px;

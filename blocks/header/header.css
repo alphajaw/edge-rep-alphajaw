@@ -421,7 +421,7 @@ header nav .nav-tools {
   border-radius: 5px;
   display: inline-block;
   position: relative;
-  margin: 5px 15px;
+  margin: 10px 15px;
 }
 .default-content-wrapper > ul:last-of-type > li:last-of-type
 {
@@ -436,7 +436,7 @@ header nav .nav-tools {
   border-radius: 5px;
   display: inline-block;
   position: relative;
-  margin: 5px 15px;
+  margin: 10px 15px;
   margin-left: 15px;
   cursor: pointer;
 }

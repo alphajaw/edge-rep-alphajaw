@@ -353,7 +353,7 @@ header nav .nav-tools {
 .default-content-wrapper>ul:last-of-type {
   display: flex;
   justify-content: space-between;
-  margin-top: -2.5rem;
+  margin-top: -3rem;
 }
 
 .default-content-wrapper>ul:last-of-type li {
@@ -421,7 +421,7 @@ header nav .nav-tools {
   border-radius: 5px;
   display: inline-block;
   position: relative;
-  margin: 14px 15px;
+  margin: 18px 15px !important;
 }
 .default-content-wrapper > ul:last-of-type > li:last-of-type
 {
@@ -436,7 +436,7 @@ header nav .nav-tools {
   border-radius: 5px;
   display: inline-block;
   position: relative;
-  margin: 14px 15px;
+  margin: 18px 15px !important;
   margin-left: 15px;
   cursor: pointer;
 }

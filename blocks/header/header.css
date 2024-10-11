@@ -424,6 +424,7 @@ header nav .nav-tools {
   position: relative;
   margin: 18px 15px !important;
   margin-top: 4px !important;
+  cursor: pointer;
 }
 .default-content-wrapper > ul:last-of-type > li:last-of-type
 {
@@ -442,6 +443,7 @@ header nav .nav-tools {
   margin: 18px 15px !important;
   margin-left: 15px;
   cursor: pointer;
+  margin-top: 4px !important;
 }
 
 .default-content-wrapper > ul:last-of-type {

@@ -354,3 +354,46 @@ header nav .nav-tools {
 .default-content-wrapper > ul:last-of-type li {
   margin-right: 20px; /* Optional: Adjust spacing between items */
 }
+.default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.default-content-wrapper > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.default-content-wrapper > ul:not(:last-child) {
+  flex-grow: 1;
+}
+
+.default-content-wrapper > ul:last-child {
+  margin-left: auto;
+}
+
+.default-content-wrapper li {
+  margin-right: 20px;
+}
+
+.nav-drop {
+  position: relative;
+}
+
+.nav-drop > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.nav-drop:hover > ul,
+.nav-drop:focus > ul {
+  display: block;
+}

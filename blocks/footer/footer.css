@@ -69,7 +69,15 @@
 .footer-section-details-3-wrapper {
   margin-top: 20px;
 }
-.footer-section-details div:first-child div img 
-{
-  
+.footer-section-details div:first-child div img {
+  width: 120px;
+  height: 36px;
+}
+.footer-section-details div:nth-of-type(2) img {
+  width: 35px; 
+  height: 35px;
+}
+.footer-section-details div:nth-of-type(3) div:nth-of-type(1) p,
+.footer-section-details div:nth-of-type(3) div:nth-of-type(2) p {
+  font-size: 18px;
 }

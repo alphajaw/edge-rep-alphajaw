@@ -348,7 +348,7 @@ header nav .nav-tools {
 .default-content-wrapper > ul:last-of-type {
   display: flex; /* Make the last ul a flex container */
   justify-content: space-between; /* Space items evenly */
-  margin-top: 1rem; /* Optional: Add some space above */
+  margin-top: -1.5rem; /* Optional: Add some space above */
 }
 
 .default-content-wrapper > ul:last-of-type li {
@@ -357,7 +357,6 @@ header nav .nav-tools {
 .default-content-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .default-content-wrapper > ul {

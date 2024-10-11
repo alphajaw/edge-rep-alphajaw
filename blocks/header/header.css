@@ -40,6 +40,8 @@ header nav {
   padding-right: 30px;
   padding-top: 20px;
   justify-content: space-between;
+  margin-right: 0%;
+  padding: 0 0 0 0 !important;
 }
 
 .nav-sections>.default-content-wrapper {
@@ -261,8 +263,7 @@ header nav .nav-sections ul>li>ul>li {
     font-size: 12px;
     font-family: Roboto;
     font-weight: 700;
-    margin-right: 0%;
-    padding: 0 0 0 0;
+    padding: 0 21px 0 10px;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul {

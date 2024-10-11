@@ -228,11 +228,12 @@ header nav .nav-sections ul>li>ul>li {
     padding-right: 16px;
     cursor: pointer;
   }
-  .nav-drop > ul {
+
+  .nav-drop>ul {
     display: none;
   }
-  
-  .nav-drop[aria-expanded="true"] > ul {
+
+  .nav-drop[aria-expanded="true"]>ul {
     display: block;
   }
 
@@ -290,7 +291,6 @@ header nav .nav-sections ul>li>ul>li {
   header nav .nav-sections .default-content-wrapper>ul>li>ul::before {
     content: '';
     position: absolute;
-    top: -8px;
     left: 8px;
     width: 0;
     height: 0;
@@ -405,8 +405,7 @@ header nav .nav-tools {
   display: block;
 }
 
-.default-content-wrapper > ul:first-of-type > li 
-{
+.default-content-wrapper>ul:first-of-type>li {
   margin-right: 0%;
   padding: 0 0 0 0 !important;
 }

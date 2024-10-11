@@ -108,11 +108,10 @@ header nav .nav-hamburger button {
 header nav .nav-hamburger-icon,
 header nav .nav-hamburger-icon::before,
 header nav .nav-hamburger-icon::after {
-  /* box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   position: relative;
-  width: 20px; */
-  display: none;
+  width: 20px;
 }
 
 header nav .nav-hamburger-icon::before,
@@ -229,9 +228,15 @@ header nav .nav-sections ul>li>ul>li {
     padding-right: 16px;
     cursor: pointer;
   }
+  .nav-drop > ul {
+    display: none;
+  }
+  
+  .nav-drop[aria-expanded="true"] > ul {
+    display: block;
+  }
 
   header nav .nav-sections .nav-drop::after {
-    content: '';
     display: inline-block;
     position: absolute;
     top: .5em;

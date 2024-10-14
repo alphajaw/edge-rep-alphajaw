@@ -76,6 +76,11 @@
    border-bottom: 1px solid rgba(33, 41, 90, .2);
    margin-bottom: 25px;
    padding-bottom: 10px;
+   color: #1a294e;
+    margin: 0;
+    font-family: Roboto;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .footer-section-details div > hr

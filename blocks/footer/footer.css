@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box; /* Include padding and borders in total width and height */
+  box-sizing: border-box;
 }
 
 .footer-section {
@@ -12,20 +12,14 @@
 }
 
 .footer-section-details-wrapper {
-  /* margin-right: auto !important;
-  max-width: 1400px !important;
-  margin-left: auto !important; */
-  /* max-width: 2000px !important;
-  /* padding: 50px 60px 0px;  */
-  width: 100vw; /* Use full viewport width */
-  max-width: 100%; /* Prevent exceeding parent width */
-  padding: 50px 0 0; /* Adjust padding */
+  width: 100vw;
+  max-width: 100%;
+  padding: 50px 55px 0;
   margin: 0 auto;
 }
 
 .footer-section-details-2-wrapper {
-  /* max-width: 2000px !important; */
-  width: 100vw; /* Use full viewport width */
+  width: 100vw;
   max-width: 100%;
   padding: 0px 60px 0px;
 }
@@ -36,12 +30,9 @@
 }
 
 .footer-section-details-3-wrapper {
-  /* max-width: 2000px !important;
-  padding: 0px 60px 0px;
-  background: #dce1ec; */
-  width: 100vw; /* Use full viewport width */
-  max-width: 100%; /* Prevent exceeding parent width */
-  padding: 0; /* Remove padding */
+  width: 100vw;
+  max-width: 100%;
+  padding: 0;
   background: #dce1ec;
 }
 
@@ -50,23 +41,22 @@
 }
 
 .footer-section-details-4-wrapper {
-  /* max-width: 2000px !important;
-  padding: 0px 60px 25px; */
-  width: 100vw; /* Use full viewport width */
-  max-width: 100%; /* Prevent exceeding parent width */
+  width: 100vw;
+  max-width: 100%;
   padding: 0 60px 25px;
 }
 
 .footer-section-details-4 {
   display: flex;
-  justify-content: space-between; /* Space between left and right */
-  align-items: center; /* Center vertically */
+  justify-content: space-between;
+  align-items: center;
   padding: 8px 0px;
 }
 
-.footer-section-details-4 > div:last-child {
-  text-align: right; /* Align text in the last child to the right */
+.footer-section-details-4>div:last-child {
+  text-align: right;
 }
+
 .footer-section-details-2 {
   color: #6a738a;
   font-size: 12px;
@@ -115,15 +105,17 @@
   padding-top: 10px;
   margin-top: 37px;
 }
+
 .footer-section-details-wrapper div:nth-child(3) div:nth-child(2),
 .footer-section-details-wrapper div:nth-child(3) div:nth-child(3) {
   font-size: 14px;
   color: #6a738a;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
+
 .footer-section-details-wrapper div:nth-child(3) div:nth-child(2) img,
 .footer-section-details-wrapper div:nth-child(3) div:nth-child(3) img {
-    margin-right: 10px; 
-    margin-top: 6px;
+  margin-right: 10px;
+  margin-top: 6px;
 }

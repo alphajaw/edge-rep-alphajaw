@@ -286,6 +286,7 @@ header nav .nav-sections ul>li>ul>li {
     white-space: initial;
     font-size: 13px;
     display: ruby;
+    border-bottom: 1px solid black;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul::before {

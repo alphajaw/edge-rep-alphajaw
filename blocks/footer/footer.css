@@ -97,3 +97,12 @@
   font-size: 14px;
   color: #6a738a;
 }
+.footer-section-details-wrapper div {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.footer-section-details-wrapper div img {
+  margin-right: 10px; /* Add space between the image and text */
+  vertical-align: middle; /* Ensure image aligns in the middle */
+}

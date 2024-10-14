@@ -280,7 +280,7 @@ header nav .nav-sections ul>li>ul>li {
     display: block;
     position: absolute;
     left: -1.5px;
-    width: 170px;
+    width: 200px;
     margin-top: 2px;
     background-color: var(--light-color);
     white-space: initial;

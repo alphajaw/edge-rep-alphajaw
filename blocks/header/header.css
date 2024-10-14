@@ -81,7 +81,7 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: black;
 }
 
 header nav .nav-hamburger {
@@ -509,5 +509,5 @@ header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li > a {
 
 /* Ensure the hover effect works on the entire item area */
 header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li > a:hover {
-  color: white;
+  color: #e19c14;
 }

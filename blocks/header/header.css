@@ -467,9 +467,11 @@ header nav .nav-tools {
 }
 header nav .nav-sections .nav-drop > ul > li:nth-child(1):hover,
 header nav .nav-sections .nav-drop > ul > li:nth-child(2):hover,
-header nav .nav-sections .nav-drop > ul > li:nth-child(3):hover {
-    background-color: transparent; /* Remove hover background */
+header nav .nav-sections .nav-drop > ul > li:nth-child(3):hover { 
     color: inherit; /* Keep original text color */
     padding-left: 0; /* Reset padding */
 }
-xy
+header nav .nav-sections .nav-drop > ul > li:nth-child(1):hover
+{
+  padding: 0;
+}

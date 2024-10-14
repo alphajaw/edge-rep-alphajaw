@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box; /* Include padding and borders in total width and height */
+}
+
 .footer-section {
   background: #f4f6fc;
 }

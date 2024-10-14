@@ -69,3 +69,8 @@
 .footer-section-details-3-wrapper {
   margin-top: 20px;
 }
+.footer-section-details div:first-child p,
+.footer-section-details div:nth-child(2) p,
+.footer-section-details div:nth-child(3) p {
+   font-size: 20px;
+}

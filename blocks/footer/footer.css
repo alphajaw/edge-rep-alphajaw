@@ -92,3 +92,8 @@
   padding-top: 10px;
   margin-top: 37px;
 }
+.footer-section-details-wrapper div:nth-child(3) div:nth-child(2),
+.footer-section-details-wrapper div:nth-child(3) div:nth-child(3) {
+  font-size: 14px;
+  color: #6a738a;
+}

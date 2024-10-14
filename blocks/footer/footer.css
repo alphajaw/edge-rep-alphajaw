@@ -86,3 +86,9 @@
 .footer-section-details div>hr {
   display: none;
 }
+
+.footer-section-details-2-wrapper p:first-child {
+  border-top: 1px solid rgba(33, 41, 90, 0.2);
+  padding-top: 10px; /* Optional: adds space between the line and the text */
+  margin-top: 0; /* Optional: removes default margin if needed */
+}

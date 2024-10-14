@@ -480,29 +480,3 @@ header nav .nav-sections .nav-drop > ul > li:nth-child(1):hover
 {
   padding: 0;
 }
-/* Target the dropdown items for Tools and News & Insights */
-header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li a {
-  color: #25375b; /* Keep original text color */
-  text-decoration: none;
-  display: block;
-  padding: 8px 10px;
-  transition: none; /* Disable any transitions */
-}
-
-header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li a:hover {
-  text-decoration: underline;
-  background-color: transparent;
-  color: #25375b; /* Keep original text color */
-}
-
-/* Ensure consistent padding and no movement on hover */
-header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li {
-  padding: 0;
-  margin: 0;
-}
-
-header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li:hover {
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-}

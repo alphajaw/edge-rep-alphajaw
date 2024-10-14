@@ -63,9 +63,6 @@
   align-items: center; /* Center vertically */
   padding: 0 60px;
 }
-.footer-section-details-4 > div {
-  flex: 1; /* Allow child divs to flex */
-}
 
 .footer-section-details-4 > div:last-child {
   text-align: right; /* Align text in the last child to the right */

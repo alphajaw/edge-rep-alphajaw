@@ -119,3 +119,11 @@
   margin-right: 10px;
   margin-top: 6px;
 }
+.footer-section-details div:nth-of-type(2) img {
+  width: 35px;
+  height: 35px;
+}
+.footer-section-details > div:nth-child(1) > div:last-child > p img {
+  width: auto !important;
+  height: 35px;
+}

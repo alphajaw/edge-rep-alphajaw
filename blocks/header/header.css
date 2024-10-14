@@ -310,6 +310,7 @@ header nav .nav-tools {
 .default-content-wrapper>ul:nth-of-type(2) :hover {
   color: white;
   height: 30px;
+  background-color: white !important;
 }
 
 .default-content-wrapper {

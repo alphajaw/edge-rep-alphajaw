@@ -481,3 +481,33 @@ header nav .nav-sections .nav-drop > ul > li:nth-child(1):hover
   padding: 0;
   height: 30px;
 }
+
+header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li {
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the dropdown items */
+header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li:hover {
+  background-color: #e19c14;
+  color: white;
+}
+
+/* Reset some previously conflicting styles */
+header nav .nav-sections .nav-drop > ul > li:hover {
+  padding-left: 16px;
+  height: auto;
+  border: none;
+}
+
+/* Style for the links inside dropdown items */
+header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+/* Ensure the hover effect works on the entire item area */
+header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li > a:hover {
+  color: white;
+}

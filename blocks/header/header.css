@@ -523,13 +523,3 @@ header nav .nav-sections .nav-drop[aria-expanded="true"]>ul>li>a {
 header nav .nav-sections .nav-drop[aria-expanded="true"]>ul>li>a:hover {
   color: #e19c14;
 }
-header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li {
-  padding: 8px 16px;
-  transition: background-color 0.3s, color 0.3s;
-  border-bottom: 1px solid #e0e0e0; /* Light gray border */
-}
-
-/* Remove bottom border from the last item */
-header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li:last-child {
-  border-bottom: none;
-}

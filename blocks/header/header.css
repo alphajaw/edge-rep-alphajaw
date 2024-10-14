@@ -471,6 +471,7 @@ header nav .nav-sections .nav-drop > ul > li:nth-child(3):hover {
     color: inherit; /* Keep original text color */
     padding-left: 0; /* Reset padding */
     height: 30px;
+    padding: 12px 16px !important;
 }
 header nav .nav-sections .nav-drop > ul > li:nth-child(1):hover
 {

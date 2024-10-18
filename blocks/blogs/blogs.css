@@ -69,18 +69,18 @@
     }
   }
 
-  .blogs-container > div:nth-child(2) > div
+  .blogs-container > div:nth-child(3) > div
   {
     flex-wrap: nowrap;
     display: flex;
     justify-content: flex-start;
     gap: 16px;
   }
-  .blogs-container > div:nth-child(2) > div > div
+  .blogs-container > div:nth-child(3) > div > div
   {
 
   }
-  .blogs-container > div:nth-child(2) > div img
+  .blogs-container > div:nth-child(3) > div img
   {
     border-radius: 10px;
   }

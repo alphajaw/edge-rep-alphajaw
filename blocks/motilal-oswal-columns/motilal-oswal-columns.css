@@ -1,0 +1,129 @@
+.columns {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .columns>div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .columns img {
+    width: 100%;
+  }
+  
+  .columns>div>div {
+    order: 1;
+  }
+  
+  .columns>div>.columns-img-col {
+    order: 0;
+  }
+  
+  .columns>div>.columns-img-col img {
+    display: block;
+  }
+  
+  
+  .motilal-oswal-columns h2 {
+    color: #21295a;
+    font-size: 30px;
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: .5rem !important;
+  }
+  
+  .motilal-oswal-columns h2::after {
+    width: 71px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    background: url("../../icons/headingImage.f63639f5.png") no-repeat;
+  }
+  
+  .motilal-oswal-columns p {
+  
+    color: #414979;
+    font-size: 15px;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+  }
+  .motilal-oswal-columns p strong{
+  margin-bottom: 1.5rem;
+  display: block;
+  }
+  .button-container {
+    cursor: pointer;
+  }
+  
+  .button-container a::before {
+    content: "";
+    transition: all .45s cubic-bezier(.65, 0, .076, 1);
+    width: 1.125rem;
+    height: .125rem;
+    background: none;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 109%;
+  }
+  .button-container a::after{
+    transition: all .45s cubic-bezier(.65, 0, .076, 1);
+    position: absolute;
+      content: "";
+      top: 42%;
+      right: -35%;
+      width: .625rem;
+      height: .625rem;
+      border-top: .125rem solid #fb4d4d;
+      border-right: .125rem solid #fb4d4d;
+      transform: rotate(45deg);
+  }
+  .button-container a:hover::after {
+    
+    transform: translate(1rem) rotate(45deg);
+  }
+  .button-container a:hover::before {
+    background: #fb4d4d;
+      transform: translate(1rem);
+      
+  }
+  
+  .button-container a {
+    position: relative;
+    transition: all .45s cubic-bezier(.65, 0, .076, 1);
+    display: inline-block;
+    padding: 20px 0;
+    margin: 0;
+    color: #fb4d4d;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+  
+  @media (width >=900px) {
+    .columns>div {
+      align-items: center;
+      flex-direction: unset;
+      gap: 50px;
+      padding: 40px 0px;
+      max-width: 1140px;
+    }
+  
+    .columns>div>div {
+      flex: 1;
+      order: unset;
+    }
+  }

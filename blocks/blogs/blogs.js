@@ -1,4 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
+import { fetchPlaceholders } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   const topics = [...block.children];

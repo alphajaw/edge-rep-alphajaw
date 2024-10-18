@@ -1,63 +1,70 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.financial-topics-container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-}
-
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+  }
+  
+  .topic-card {
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    text-align: center;
-    padding: 20px;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .topic-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .topic-card img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.card h3 {
-    margin: 15px 0 10px;
-    font-size: 18px;
-}
-
-.card p {
-    color: #777;
-    font-size: 14px;
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .topic-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin: 16px 16px 8px;
+  }
+  
+  .topic-date {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0 16px 16px;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 8px;
+    margin: 0 16px 16px;
+  }
+  
+  .social-links a {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .financial-topics-container {
+      grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media (max-width: 480px) {
-    .card-container {
-        grid-template-columns: 1fr;
+  }
+  
+  @media (max-width: 640px) {
+    .financial-topics-container {
+      grid-template-columns: 1fr;
     }
-}
+  }

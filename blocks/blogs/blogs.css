@@ -74,4 +74,13 @@
     flex-wrap: nowrap;
     display: flex;
     justify-content: flex-start;
+    gap: 16px;
+  }
+  .blogs-container > div:nth-child(2) > div > div
+  {
+
+  }
+  .blogs-container > div:nth-child(2) > div img
+  {
+    border-radius: 10px;
   }

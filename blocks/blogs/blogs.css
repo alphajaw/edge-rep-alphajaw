@@ -68,3 +68,10 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .blogs-container > div:nth-child(2) > div
+  {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: flex-start;
+  }

@@ -1,37 +1,41 @@
 import { createOptimizedPicture } from "../../scripts/aem";
 
-function createStockCard(container) {
-    // Create the stock card element
-    const card = document.createElement('div');
-    card.className = 'dyanmicapi';
-    card.innerHTML = `
-      <div class="stock-header">
-        <span class="stock-name">NIFTY 50</span>
-        <span class="stock-time">11:49 AM</span>
-      </div>
-      <div class="stock-price">24763.10</div>
-      <div class="stock-change">▼ -90.95 (-0.37%)</div>
-      <div class="time-buttons">
-        <button class="time-button active">1D</button>
-        <button class="time-button">1W</button>
-        <button class="time-button">1M</button>
-        <button class="time-button">3M</button>
-      </div>
-      <canvas id="stock-chart"></canvas>
+function createStockCard(container, stockName) {
+    // Preserve the existing div and its content
+    const nameDiv = container.querySelector('div');
+    
+    // Create new elements for the stock card
+    const priceDiv = document.createElement('div');
+    priceDiv.className = 'stock-price';
+    
+    const changeDiv = document.createElement('div');
+    changeDiv.className = 'stock-change';
+    
+    const timeButtonsDiv = document.createElement('div');
+    timeButtonsDiv.className = 'time-buttons';
+    timeButtonsDiv.innerHTML = `
+      <button class="time-button active">1D</button>
+      <button class="time-button">1W</button>
+      <button class="time-button">1M</button>
+      <button class="time-button">3M</button>
     `;
-  
-    // Append the card to the provided container
-    container.appendChild(card);
-  
+    
+    const chartCanvas = document.createElement('canvas');
+    
+    // Append new elements
+    container.appendChild(priceDiv);
+    container.appendChild(changeDiv);
+    container.appendChild(timeButtonsDiv);
+    container.appendChild(chartCanvas);
+    
     // Create chart
-    const ctx = card.querySelector('#stock-chart').getContext('2d');
-    const chart = new Chart(ctx, {
+    const chart = new Chart(chartCanvas.getContext('2d'), {
       type: 'line',
       data: {
-        labels: ['09:14', '10:04', '11:04', '11:44'],
+        labels: [],
         datasets: [{
           label: 'Stock Price',
-          data: [24900, 24750, 24800, 24763.10],
+          data: [],
           borderColor: '#ff9999',
           backgroundColor: 'rgba(255, 153, 153, 0.2)',
           borderWidth: 2,
@@ -55,60 +59,67 @@ function createStockCard(container) {
     });
   
     // Add event listeners to time buttons
-    card.querySelectorAll('.time-button').forEach(button => {
+    timeButtonsDiv.querySelectorAll('.time-button').forEach(button => {
       button.addEventListener('click', () => {
-        card.querySelectorAll('.time-button').forEach(b => b.classList.remove('active'));
+        timeButtonsDiv.querySelectorAll('.time-button').forEach(b => b.classList.remove('active'));
         button.classList.add('active');
         // Here you would update the chart data based on the selected time range
       });
     });
   
-    return { card, chart };
+    return { container, chart };
   }
   
-  function fetchStockData() {
+  function fetchStockData(stockName) {
     // Simulating an API call - replace with actual data fetching logic
     return new Promise(resolve => {
       setTimeout(() => {
         resolve({
-          name: 'NIFTY 50',
-          price: 24763.10,
-          change: -90.95,
-          percentChange: -0.37,
-          time: '11:49 AM',
-          historicalData: [
-            { time: '09:14', price: 24900 },
-            { time: '10:04', price: 24750 },
-            { time: '11:04', price: 24800 },
-            { time: '11:44', price: 24763.10 }
-          ]
+          name: stockName,
+          price: 24763.10 + Math.random() * 1000,
+          change: -90.95 + Math.random() * 100,
+          percentChange: -0.37 + Math.random(),
+          time: new Date().toLocaleTimeString(),
+          historicalData: Array.from({length: 20}, (_, i) => ({
+            time: new Date(Date.now() - (19-i)*15*60000).toLocaleTimeString(),
+            price: 24000 + Math.random() * 1000
+          }))
         });
       }, 1000);
     });
   }
   
-  function updateStockCard(card, chart, data) {
-    card.querySelector('.stock-name').textContent = data.name;
-    card.querySelector('.stock-time').textContent = data.time;
-    card.querySelector('.stock-price').textContent = data.price.toFixed(2);
-    card.querySelector('.stock-change').textContent = `▼ ${data.change.toFixed(2)} (${data.percentChange.toFixed(2)}%)`;
+  function updateStockCard(container, chart, data) {
+    container.querySelector('div').textContent = `${data.name} ${data.time}`;
+    container.querySelector('.stock-price').textContent = data.price.toFixed(2);
+    container.querySelector('.stock-change').textContent = 
+      `${data.change > 0 ? '▲' : '▼'} ${Math.abs(data.change).toFixed(2)} (${data.percentChange.toFixed(2)}%)`;
     
     chart.data.labels = data.historicalData.map(d => d.time);
     chart.data.datasets[0].data = data.historicalData.map(d => d.price);
     chart.update();
   }
   
-  // Edge Delivery Services block function
   function decorate(block) {
-    const { card, chart } = createStockCard(block);
+    const stockCards = [];
     
-    // Initial data fetch and update
-    fetchStockData().then(data => updateStockCard(card, chart, data));
-    
+    block.querySelectorAll(':scope > div').forEach(container => {
+      const stockName = container.textContent.trim();
+      const { container: updatedContainer, chart } = createStockCard(container, stockName);
+      stockCards.push({ container: updatedContainer, chart, name: stockName });
+    });
+  
+    function updateAllCards() {
+      stockCards.forEach(({ container, chart, name }) => {
+        fetchStockData(name).then(data => updateStockCard(container, chart, data));
+      });
+    }
+  
+    // Initial update
+    updateAllCards();
+  
     // Periodic updates
-    setInterval(() => {
-      fetchStockData().then(data => updateStockCard(card, chart, data));
-    }, 60000); // Update every minute
+    setInterval(updateAllCards, 60000); // Update every minute
   }
   
   export default decorate;

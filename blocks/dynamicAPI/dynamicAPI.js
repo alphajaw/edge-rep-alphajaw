@@ -1,4 +1,5 @@
 import { createOptimizedPicture } from "../../scripts/aem";
+import { fetchPlaceholders } from '../../scripts/aem.js';
 
 function createStockCard(container, stockName) {
     // Preserve the existing div and its content

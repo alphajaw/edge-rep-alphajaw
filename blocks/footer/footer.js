@@ -1,21 +1,26 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+import { MobileAppSection } from '../footer/MobileAppSection.js';
 
-/**
- * loads and decorates the footer
- * @param {Element} block The footer block element
- */
-export default async function decorate(block) {
-  const footerMeta = getMetadata('footer');
-  block.textContent = '';
+export default function decorate(block) {
+  const sections = block.querySelectorAll(':scope > div');
+  
+  sections.forEach((section) => {
+    const [title, content] = section.children;
+    section.classList.add('footer-section');
+    title.classList.add('footer-section-title');
+    content.classList.add('footer-section-content');
 
-  // load footer fragment
-  const footerPath = footerMeta.footer || '/footer';
-  const fragment = await loadFragment(footerPath);
-
-  // decorate footer DOM
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
-  block.append(footer);
+    if (title.textContent.trim().toUpperCase() === 'MOBILE APP') {
+      const mobileAppSection = new MobileAppSection(section);
+      mobileAppSection.init();
+    } else {
+      // Handle other sections (FOLLOW US, CONTACT US)
+      const list = document.createElement('ul');
+      [...content.children].forEach((item) => {
+        const li = document.createElement('li');
+        li.append(item);
+        list.append(li);
+      });
+      content.append(list);
+    }
+  });
 }

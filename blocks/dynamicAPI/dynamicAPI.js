@@ -1,4 +1,3 @@
-import { createOptimizedPicture } from "../../scripts/aem.js";
 import { fetchPlaceholders } from '../../scripts/aem.js';
 
 function createStockCard(container, stockName) {

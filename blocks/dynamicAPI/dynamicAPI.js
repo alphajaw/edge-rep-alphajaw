@@ -3,7 +3,7 @@ import { createOptimizedPicture } from "../../scripts/aem";
 function createStockCard(container) {
     // Create the stock card element
     const card = document.createElement('div');
-    card.className = 'stock-card';
+    card.className = 'dyanmicapi';
     card.innerHTML = `
       <div class="stock-header">
         <span class="stock-name">NIFTY 50</span>
